@@ -1,0 +1,424 @@
+
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+   }
+
+.navbar {
+    display: flex;
+    justify-content: space-around;   
+    align-items: center;
+    padding: 0 1.5vw;
+    background-color: white;
+    position: fixed;
+    text-decoration: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.toogle {
+    display: none;
+}
+
+.logo-sariminang {
+    list-style: none;
+    text-decoration: none;
+    height: 40px;
+}
+
+.navbar-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 20px 0;
+    text-decoration: none;
+}
+
+.navbar-item {
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    align-items: center;
+    font-weight: 600;
+    list-style: none;
+    color: #555555;
+    padding: 8px 25px;
+    transition: all .5s ease;
+}   
+
+.navbar-item-a {
+    text-decoration: none;
+    color: #555555;
+    transition: all .5s ease;
+}
+
+.navbar-item-a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+    transition: all .5s ease;
+}
+
+
+.btn-ourproducts {
+    margin-right: 0.5rem;
+    padding-block: 1rem;
+    padding-inline: 3rem;
+    list-style: none;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFCD29;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    border-style: none;
+    transition: all .5s ease;
+}
+
+.btn-ourproducts:hover {
+    background-color: white;
+    color: #FFCD29;
+    box-shadow: 0 0 10px ;
+    transition: all .5s ease;
+}
+
+@media screen and (max-width:912px) {
+
+    .toogle {
+        display: none;
+    }
+
+    .navbar-list {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .slider {
+        display: none;
+    }
+
+    .toogle {
+        display: flex;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        padding-inline: 1.5rem;
+        flex-wrap: wrap;
+        display: none;
+    }
+
+    .logo-sariminang {
+        list-style: none;
+        text-decoration: none;
+        height: 25px;
+        padding: 10px;
+    }
+
+    .navbar-list {
+        display: none;
+    }
+
+    .btn-ourproducts {
+        display: none;
+    }
+
+    .img_toogle {
+        height: 20px;
+    }
+
+    .header__title {
+        font-size: 10vw;
+    }
+
+    .banner-aboutus {
+        display: none;
+    }
+
+    .float {
+        display: none;
+    }
+
+    .desk_highlighted_seasoning {
+        font-size: 4vw;
+    }
+
+}
+
+/* end navbar */
+
+/* header */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.bg-image {
+    background-image: url(../assets/header.png);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+.container {
+    position: absolute;
+    z-index: 2;
+}
+
+.header__title {
+    color: white;
+    font-weight: 600;
+    font-size: 2.2vw;
+}
+
+@media screen and (max-width:480px) {
+    .header__title {
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:414px) {
+    .header__title {
+        font-size: 2.25rem;
+    }
+}
+
+/* end header */
+
+/* tab layout */
+
+
+[data-tab-content] {
+    display: none;
+  }
+  
+  .active[data-tab-content] {
+    display: block;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-inline: 35rem;
+    margin-block: 2.5rem;
+    padding: 1.5rem;
+    border-bottom: 2px solid #3f3f3f;
+    border-radius: 1rem;
+    
+  }
+  
+  .tab {
+    cursor: pointer;
+    padding: 10px;
+    color: #555555;
+    font-weight: 800;
+  }
+  
+  .tab.active {
+    color: #212529;
+  }
+  
+  .tab:hover {
+    color: #212529;
+  }
+  
+  .tab-content {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .nama_tablayout {
+    color: #212529;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10rem;
+    row-gap: 7rem;
+    margin-inline: 20rem;
+    margin-top: 5rem;
+  }
+  
+  .grid-item {
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #e2e2e2;
+    width: 100%; 
+  }
+
+  .grid-item:hover {
+    box-shadow: 0 0 50px #e2e2e2;
+    transition: all .2s ease-in-out;
+  }
+
+  .img_gridlayout {
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+  
+  .nama_grid-item {
+    font-weight: 500;
+    color: #3f3f3f;
+    font-size: 1.25rem;
+    padding-left: 1.5rem;
+    padding-top: 1.25rem;
+  }
+
+  .desk_grid-item {
+    color: #949494;
+    padding-inline: 1.6rem;
+    padding-top: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  .harga_grid-item {
+    color: #3f3f3f;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-inline: 1.6rem;
+    padding-top: 1.5rem;
+  }
+
+  .asalkota_grid-item {
+    color: #949494;
+    padding-inline: 1.6rem;
+    padding-top: 0.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  /* end Tablayout */
+
+
+  /* footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 25rem;
+    margin-bottom: 5rem;
+}
+
+.text_footer {
+    font-weight: 700;
+    color: #212529;
+    margin-top: 1.5rem;
+}
+
+.desk_footer {
+    color: #212529;
+    margin-top: 2rem;
+}
+
+.sitemap {
+    font-weight: 500;
+    font-size: 1vw;
+    color: #212529;
+}
+
+li {
+    list-style: none;
+}
+
+.footer_sitemap {
+    margin-top: 3rem;
+    text-decoration: none;
+    color: #555555;
+    transition: all .5s ease;
+}
+
+.sitemap_footer_item {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #212529;
+}
+
+.sitemap_footer_item:hover {
+    color: black;
+}
+
+.sitemap_footer {
+    font-size: 0.6vw;
+    text-decoration: none;
+    list-style: none;
+    color: #555555;
+    transition: all .5s ease;
+}
+
+.sitemap_footer_kota {
+    font-weight: 700;
+    color: #212529;
+}
+
+.sitemap_footer_nomorhp {
+    color: #FFCD29;
+    font-size: 0.6vw;
+}
+
+@media screen and (max-width:480px) {
+    footer {
+        display: block;
+        text-align: center;
+    }
+
+    .desk_footer {
+        margin-top: 1.5rem;
+    }
+
+    .sitemap {
+        font-size: 1rem;
+    }
+
+    .sitemap_footer_nomorhp {
+        font-size: 0.8rem;
+    }
+
+    .sitemap_footer {
+        font-size: 0.8rem;
+    }
+
+    .footer_row {
+        margin-block: 5rem;
+        margin-inline: 2rem;
+    }
+}
+
+
+/* end footer */
